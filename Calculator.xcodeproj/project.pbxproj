@@ -14,6 +14,7 @@
 		BC01CCB61F9E1D1C00CB3642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC01CCB41F9E1D1C00CB3642 /* LaunchScreen.storyboard */; };
 		BC01CCC11F9E1D1C00CB3642 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC01CCC01F9E1D1C00CB3642 /* CalculatorTests.swift */; };
 		BC01CCCC1F9E1D1C00CB3642 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC01CCCB1F9E1D1C00CB3642 /* CalculatorUITests.swift */; };
+		BC0AB10F1F9F6E500060C5D3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AB10E1F9F6E500060C5D3 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BC01CCC71F9E1D1C00CB3642 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC01CCCB1F9E1D1C00CB3642 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		BC01CCCD1F9E1D1C00CB3642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC0AB10E1F9F6E500060C5D3 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				BC01CCB21F9E1D1C00CB3642 /* Assets.xcassets */,
 				BC01CCB41F9E1D1C00CB3642 /* LaunchScreen.storyboard */,
 				BC01CCB71F9E1D1C00CB3642 /* Info.plist */,
+				BC0AB10E1F9F6E500060C5D3 /* RoundedButton.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC01CCAE1F9E1D1C00CB3642 /* ViewController.swift in Sources */,
+				BC0AB10F1F9F6E500060C5D3 /* RoundedButton.swift in Sources */,
 				BC01CCAC1F9E1D1C00CB3642 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +509,7 @@
 				BC01CCD21F9E1D1C00CB3642 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC01CCD31F9E1D1C00CB3642 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				BC01CCD51F9E1D1C00CB3642 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC01CCD61F9E1D1C00CB3642 /* Build configuration list for PBXNativeTarget "CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				BC01CCD81F9E1D1C00CB3642 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
