@@ -13,12 +13,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var secondOperandLabel: UILabel!
     @IBOutlet weak var operatorLabel: UILabel!
-    
-    var a: Int = 0
-    var b: Int = 0
-    
+
+    @IBAction func crashButton(_ sender: Any) {
+        
+        fatalError()
+        //let testCrash: Int
+        
+    }
+    var operA: Int = 0
+    var operB: Int = 0
+
     var oppActual: OPP = OPP.add
-    
+
     enum OPP {
         case add
         case sub
@@ -30,22 +36,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.resultLabel.alpha = 0
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+
+    override func viewDidAppear (_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        //Animation Fade In for the resultLabel
-        UIView.animate(withDuration: 2) { 
+        UIView.animate (withDuration: 2) {
             self.resultLabel.alpha = 1
         }
     }
-    
+
     /*override func viewWilldisappear(_ animated: Bool) {
         super?viewWilldisappear(<#T##animated: Bool##Bool#>)
     }*/
@@ -56,27 +59,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didPressNumber(_ sender: Any) {
-        
         guard let button = sender as? UIButton else {
             return
         }
-        
         if resultLabel.text == "0" {
             resultLabel.text = button.titleLabel?.text
         } else {
             resultLabel.text?.append(button.titleLabel?.text ?? "")
         }
     }
-    
+
     @IBAction func didPressAdd(_ sender: Any) {
         oppActual = OPP.add
-        if(b>0) {
-            a = Int(resultLabel.text ?? "") ?? 0
-            b = b+a
+        if(operB>(-1)) {
+            operA = Int(resultLabel.text ?? "") ?? 0
+            operB /= operA
         } else {
-            b = Int(resultLabel.text ?? "") ?? 0
+            operB = Int(resultLabel.text ?? "") ?? 0
         }
-        secondOperandLabel.text=String(b)
+        secondOperandLabel.text = String(operB)
         resetDisplay()
     }
     
@@ -90,10 +91,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didPressEqual(_ sender: Any) {
-        if(b>0) {
+        if operB>0 {
             //Add:
-            a=Int(resultLabel.text ?? "") ?? 0
-            secondOperandLabel.text = String(a+b)
+            operA=Int(resultLabel.text ?? "") ?? 0
+            secondOperandLabel.text = String(operA+operB)
             resetDisplay()
         }
     }
