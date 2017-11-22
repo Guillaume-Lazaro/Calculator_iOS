@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Sentry
+//import Sentry
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        /*
         //Centry:
         // Create a Sentry client and start crash handler
         do {
@@ -26,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("\(error)")
             // Wrong DSN or KSCrash not installed
         }
+        */
+        
         return true
     }
 
